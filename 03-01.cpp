@@ -10,7 +10,6 @@ void add_data(string data) // 데이터 추가 방법 정의 함수
 
 }
 
-
 int main() {
     add_data("성혁");
     add_data("승민");
