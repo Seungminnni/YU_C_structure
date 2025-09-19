@@ -2,9 +2,9 @@
 
 Array <int> px = {-7, -4, 0, 5};
 
-string print_poly(Array <int> p_x){
-    int term = len(p_x);
-    string polyStr = "P(x) = ";
+string print_poly(Array <int> p_x){ // 다항식 출력 함수
+    int term = len(p_x) -1; //  항 갯수는 배열 길이 - 1, 이 의미는 최고차항의 차수
+    string polyStr = "P(x) = "; //
 
     for (int i = 0; i < len(p_x); i++){
         int coef = p_x[i];
