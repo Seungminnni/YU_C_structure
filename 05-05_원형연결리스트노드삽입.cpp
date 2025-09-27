@@ -1,12 +1,12 @@
 #include "..\CookHeader.h"
 
-typedef struct _Node {
-	string data;
-	struct _Node* link = NULL;
-} Node;
+typedef struct _Node { // 노드 구조체 선언
+	string data; // 데이터 타입 : string
+	struct _Node* link = NULL; // 다음 노드를 가르키는 포인터, 링크, NULL로 초기화
+} Node; // 노드라고 선언
 
-Array <Node*> memory;
-Node* head, * current, * pre;
+Array <Node*> memory; // 동적할당 된 노드의 주소를 저장하는 배열
+Node* head, * current, * pre; // 노드의 두성은 헤드, 현재, 이전
 Array <string> dataArray = { "다현", "정연", "채영", "쯔위", "사나" };
 
 void printNodes(Node* start) {
