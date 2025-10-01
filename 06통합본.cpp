@@ -4,16 +4,16 @@ int SIZE;
 Array <string> stackArr;
 int top = -1;
 
-bool isStackFull(){
-    if(top == SIZE -1){
+bool isStackFull(){ // 가득 찼을때
+    if(top == SIZE -1){ // top 숫자가 스택사이즈 -1일때 <- 이거는 컴퓨터는 0부터 시작이기 때문에 -1을 해줘야 정의한 사이즈라고 볼 수 있음
         return true;
     }
     return false;
 }
 
-bool isStackEmpty(){
-    if(top == -1){
-        return true;
+bool isStackEmpty(){ // 비었을때
+    if(top == -1){ // top숫자가 -1일때
+        return true; // true를 반환
     }
     return false;
 }
@@ -38,12 +38,12 @@ string pop(){
     return data;
 }
 
-string peek(){
-    if(isStackEmpty()){
+string peek(){ // 맨 위에 데이터를 출력
+    if(isStackEmpty()){ // 그런데 비어있다면
         println("스택이 비어 있습니다.");
         return "None";
     }
-    return stackArr[top];
+    return stackArr[top]; // 출력
 }
 
 int main(){
@@ -55,8 +55,8 @@ int main(){
     input(select, "삽입(I)/추출(E)/확인(V)/종료(X) 중 하나를 선택: ");
 
     string data;
-    while(select != 'X' && select != 'x'){
-        switch(select){
+    while(select != 'X' && select != 'x'){ // X가 아닌 경우 수행되는 반복문
+        switch(select){ // select 변수에 따른 수행
             case 'I': case 'i':
                 input(data, "삽입할 데이터 입력: ");
                 push(data);
