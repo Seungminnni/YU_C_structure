@@ -29,6 +29,14 @@ string deQueue(){ // 큐에서 데이터 추출
     return data; // data 반환
 }
 
+string peek(){ // 맨 앞에 데이터를 출력
+    if(isQueueEmpty()){ // 그런데 비어있다면
+        println("큐가 비어 있습니다.");
+        return "None"; // None 반환
+    }
+    return queueArr[front + 1]; // 출력
+}
+
 void enQueue(string data){ // 큐에 데이터 삽입
     if(isQueueFull()){ // 만약 찼다면 
         println("큐가 가득 찼습니다."); //출력하고
