@@ -28,8 +28,9 @@ int main(){
     node5->data = "지효";
     node4->link = node5;
 
-    node2->link = node3->link;
-    delete node3;
+    node2->link = node3->link; /* 노드 2의 링크가 노드 4를 가르키도록 함 ,, 
+    노드 2의 링크가 노드 3의 링크가 되도록 설정 */
+    delete node3; // 노드 3을 지움
 
     Node* current = head;
     print(current->data);

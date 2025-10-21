@@ -9,10 +9,10 @@ void delete_data(int position) // 데이터 삭제 방법 정의 함수
         return;
     }
     int kLen = len(katok); // 선형 리스트의 길이
-    katok[position] = "None"; // 입력된 위치에 빈칸을 추가
+    katok[position] = "None"; // 삭제하고 싶은 위치에 빈칸으로 선언
 
 
-    for (int i = position + 1; i < kLen; i++) { // 입력된 위치에서 리스트 끝까지 반복함
+    for (int i = position + 1; i < kLen; i++) { // 입력된 위치 다음 위치에서 리스트 끝까지 반복함
         katok[i - 1] = katok[i]; // 뒷 내용을 앞으로 밀기
         katok[i] = "None"; // 뒤로 민 것을 빈칸으로 정의
     }

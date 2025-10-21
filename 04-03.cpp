@@ -28,10 +28,10 @@ int main(){
     node5->data = "지효";
     node4->link = node5;
 
-    Node* newNode = new Node;
-    newNode->data = "재남";
-    newNode->link = node2->link;
-    node2->link = newNode;
+    Node* newNode = new Node; // 새로운 노드 객체 생성
+    newNode->data = "재남"; // 새로운 노드의 데이터는 재남
+    newNode->link = node2->link; // 새로운 노드의 링크는 노드 2로 링크를 통해 이뤄짐
+    node2->link = newNode; // 노트 2에서 다음으로 이어지는 것은 새로운 노드다
 
     Node* current = head;
     print(current->data);

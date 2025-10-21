@@ -28,11 +28,11 @@ int main(){
     node5->data = "지효";
     node4->link = node5;
 
-    Node* current = head;
-    print(current->data);
-    while (current->link != NULL) {
-        current = current->link;
-        print(current->data);
+    Node* current = head; // 현재 노드의 포인터가 머리로 시작
+    print(current->data); // 현재 데이터를 출력
+    while (current->link != NULL) { // 값이 있다면
+        current = current->link; // 다음 노드로 이동
+        print(current->data); // 다음 노드의 데이터를 출력
 }
     
     return 0;

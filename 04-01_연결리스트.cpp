@@ -8,13 +8,13 @@ typedef struct _Node { //
 int main(){
     Node* head;
 
-    Node* node1 = new Node;
-    node1->data = "다현";
-    head = node1;
-
+    Node* node1 = new Node; // 새 노드 객체 생성
+    node1->data = "다현"; // 1번 노드에 다현이라고 넣음
+    head = node1; // 머리가 1번 노드라고 결정
+ 
     Node* node2 = new Node;
     node2->data = "정연";
-    node1->link = node2; // link after node2 is created
+    node1->link = node2; 
 
     Node* node3 = new Node;
     node3->data = "쯔위";
